@@ -8,6 +8,8 @@ USDT-TRON TQ1cxj8csRyWUzkonf5XgYUyFGsDJn1k7J
 
 USDT-BSC 0x3fa39005a6bb18d0e2546d97b24a767cc393b03a
 
+## This is A Quantum Probabilistic Code That will Reduce The KeySpace of BTC Puzzles : https://privatekeys.pw/puzzles/bitcoin-puzzle-tx
+
 TODO: The Next Project is To Reveal A Supirior Version That Will Use Probabilistic Algorithm of Pbits Jumps Will be Used to Reduce All the Puzzles of BTC given Rangs to 2.0 % Targeting Public-Addresses . 
 
 ---
