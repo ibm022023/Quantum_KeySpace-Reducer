@@ -454,55 +454,55 @@ PUZZLE_PRESETS: Dict[int, Dict] = {
     5:  {"start": 0x10,
          "end":   0x1F,
          "pub":   "02352bbf4a4cdd12564f93fa332ce333301d9ad40271f8107181340aef25be59d5",
-         "shots": 1024,   "layers": 3, "iters": 6,  "probes": 128},
+         "shots": 4096,   "layers": 3, "iters": 6,  "probes": 128},
     8:  {"start": 0x80,
          "end":   0xFF,
          "pub":   "0308bc89c2f919ed158885c35600844d49890905c79b357322609c45706ce6b514",
-         "shots": 8192,   "layers": 3, "iters": 8,  "probes": 256},
+         "shots": 4096,   "layers": 3, "iters": 8,  "probes": 256},
     14: {"start": 0x2000,
          "end":   0x3FFF,
          "pub":   "03b4f1de58b8b41afe9fd4e5ffbdafaeab86c5db4769c15d6e6011ae7351e54759",
-         "shots": 10000,  "layers": 4, "iters": 10, "probes": 512},
+         "shots": 4096,  "layers": 4, "iters": 10, "probes": 512},
     16: {"start": 0x8000,
          "end":   0xFFFF,
          "pub":   "029d8c5d35231d75eb87fd2c5f05f65281ed9573dc41853288c62ee94eb2590b7a",
-         "shots": 32768,  "layers": 4, "iters": 12, "probes": 512},
+         "shots": 4096,  "layers": 4, "iters": 12, "probes": 512},
     20: {"start": 0x80000,
          "end":   0xFFFFF,
          "pub":   "033c4a45cbd643ff97d77f41ea37e843648d50fd894b864b0d52febc62f6454f7c",
-         "shots": 32768,  "layers": 4, "iters": 12, "probes": 512},
+         "shots": 4096,  "layers": 4, "iters": 12, "probes": 512},
     21: {"start": 0x100000,
          "end":   0x1FFFFF,
          "pub":   "031a746c78f72754e0be046186df8a20cdce5c79b2eda76013c647af08d306e49e",
-         "shots": 32768,  "layers": 4, "iters": 12, "probes": 512},
+         "shots": 4096,  "layers": 4, "iters": 12, "probes": 512},
     24: {"start": 0x800000,
          "end":   0xFFFFFF,
          "pub":   "036ea839d22847ee1dce3bfc5b11f6cf785b0682db58c35b63d1342eb221c3490c",
-         "shots": 65536,  "layers": 4, "iters": 12, "probes": 512},
+         "shots": 4096,  "layers": 4, "iters": 12, "probes": 512},
     25: {"start": 0x1000000,
          "end":   0x1FFFFFF,
          "pub":   "03057fbea3a2623382628dde556b2a0698e32428d3cd225f3bd034dca82dd7455a",
-         "shots": 65536,  "layers": 4, "iters": 14, "probes": 512},
+         "shots": 4096,  "layers": 4, "iters": 14, "probes": 512},
     32: {"start": 0x80000000,
          "end":   0xFFFFFFFF,
          "pub":   "036ea839d22847ee1dce3bfc5b11f6cf785b0682db58c35b63d1342eb221c3490c",
-         "shots": 65536,  "layers": 5, "iters": 16, "probes": 1024},
+         "shots": 4096,  "layers": 5, "iters": 16, "probes": 1024},
     40: {"start": 0x8000000000,
          "end":   0xFFFFFFFFFF,
          "pub":   "03a2efa402fd5268400c77c20e574ba86409ededee7c4020e4b9f0edbee53de0d4",
-         "shots": 65536,  "layers": 5, "iters": 16, "probes": 1024},
+         "shots": 4096,  "layers": 5, "iters": 16, "probes": 1024},
     64: {"start": 0x8000000000000000,
          "end":   0xFFFFFFFFFFFFFFFF,
          "pub":   "03100611c54dfef604163b8358f7b7fac13ce478e02cb224ae16d45526b25d9d4d",
-         "shots": 65536,  "layers": 5, "iters": 16, "probes": 1024},
+         "shots": 4096,  "layers": 5, "iters": 16, "probes": 1024},
     71: {"start": 0x400000000000000000,
          "end":   0x7fffffffffffffffff,
          "pub":   None, # Use Hash160 Mod-1_Version
-         "shots": 65536,  "layers": 5, "iters": 16, "probes": 1024},
+         "shots": 4096,  "layers": 5, "iters": 16, "probes": 1024},
     135:{"start": 0x400000000000000000000000000000000,
          "end":   0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,
          "pub":   "02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16",
-         "shots": 100000, "layers": 5, "iters": 20, "probes": 1024},
+         "shots": 4096, "layers": 5, "iters": 20, "probes": 1024},
 }
 
 
@@ -519,10 +519,10 @@ def _preset_shots(bits: int) -> int:
     return (PUZZLE_PRESETS.get(bits) or {}).get("shots", 4096)
 
 def _preset_layers(bits: int) -> int:
-    return (PUZZLE_PRESETS.get(bits) or {}).get("layers", 4)
+    return (PUZZLE_PRESETS.get(bits) or {}).get("layers", 5)
 
 def _preset_iters(bits: int) -> int:
-    return (PUZZLE_PRESETS.get(bits) or {}).get("iters", 12)
+    return (PUZZLE_PRESETS.get(bits) or {}).get("iters", 4)
 
 def _preset_probes(bits: int) -> int:
     return (PUZZLE_PRESETS.get(bits) or {}).get("probes", 512)
@@ -4695,7 +4695,7 @@ def interactive_main() -> None:
     print("  │  (shots / layers / iters auto-filled when a preset is selected)  │")
     print("  │    5 · 8 · 14 · 16 · 20 · 21 · 24 · 25 · 32 · 40 · 64 · 71 · 135│")
     print("  └───────────────────────────────────────────────────────────────────┘")
-    bits_s = _ask("Bit length", "16")
+    bits_s = _ask("Bit length", "20")
     bits   = int(bits_s)
     full_start, full_end = auto_range(bits)
     print(f"  Full key range: [{hex(full_start)}, {hex(full_end)}]")
@@ -4819,10 +4819,10 @@ def interactive_main() -> None:
 
 
     # ── Sampler parameters — pre-filled from preset ────────────────────────────
-    _def_shots  = _preset_shots(bits)
-    _def_layers = _preset_layers(bits)
-    _def_iters  = _preset_iters(bits)
-    _def_probes = _preset_probes(bits)
+    _def_shots  = 4096
+    _def_layers = 5
+    _def_iters  = 4
+    _def_probes = 512
     _has_preset = bits in PUZZLE_PRESETS
     _pfx        = "preset" if _has_preset else "default"
 
@@ -4841,14 +4841,14 @@ def interactive_main() -> None:
     print(f"  │  Layers ({_pfx:<7})  {_def_layers} (3=fast · 5=deep)                 │")
     print(f"  │  Iters ({_pfx:<7})   {_def_iters:<2} (4=quick · 20=thorough)           │")
     print(f"  │  Ising probes ({_pfx:<7}) {_def_probes:<4} (256=fast · 1024=best)   │")
-    print( "  │  SPSA iterations     0=disabled · 40=fast · 60=default · 100=best│")
+    print( "  │  SPSA iterations     0=disabled · 40=fast · 0=default · 100=best│")
     print( "  └───────────────────────────────────────────────────────────────────┘")
     layers     = int(_ask("TwoLocal layers",         str(_def_layers)))
     iters      = int(_ask("Iterations",              str(_def_iters)))
     shots      = int(_ask("Shots per iter",          str(_def_shots)))
     opt_level  = int(_ask("Transpile opt level",     "2"))
     n_probes   = int(_ask("Ising probes",            str(_def_probes)))
-    spsa_iters = int(_ask("SPSA iterations (0=off)", "60"))
+    spsa_iters = int(_ask("SPSA iterations (0=off)", "0"))
     use_spsa   = spsa_iters > 0 and SPSA_OK
 
     # ── Grover-IPE ─────────────────────────────────────────────────────────────
@@ -4860,12 +4860,12 @@ def interactive_main() -> None:
     print("\n  ┌─ GROVER-IPE PARAMETERS ───────────────────────────────────────────┐")
     print("  │  IPE rounds       3=fast(min) · 4=default · 6=thorough           │")
     print("  │  Grover shots     2048=fast · 4096=default · 8192=thorough        │")
-    print("  │  Top-K candidates 32=fast · 128=default(G-8) · 256=thorough      │")
+    print("  │  Top-K candidates 32=fast · 4096=default(G-8) · 256=thorough      │")
     print(f"  │  Oracle (auto)    {oracle_info:<52} │")
     print("  └───────────────────────────────────────────────────────────────────┘")
     n_ipe   = int(_ask("IPE rounds (≥3)",      "4"))
     g_shots = int(_ask("Grover shots",         str(_def_shots)))
-    g_topk  = int(_ask("Top-K candidates",    "128"))
+    g_topk  = int(_ask("Top-K candidates",    "4096"))
 
     # ── Multi-run ─────────────────────────────────────────────────────────────
     print("\n  ┌─ MULTI-RUN VOTING [G-6] ─────────────────────────────────────────┐")
@@ -4966,6 +4966,7 @@ def interactive_main() -> None:
     print(f"  │  Range size  : {new_size:<,} keys")
     print(f"  │  Reduction   : {reduction:.1f}× smaller than full {bits}-bit range")
     print(f"  │  Method      : Quantum walk interference density — measured values only")
+    print(f"  │  Please Any Donation: 1Bu4CR8Bi5AXQG8pnu1avny88C5CCgWKfb")
     print(f"  └────────────────────────────────────────────────────────────────────┘")
     print(f"")
     print(f"  BitCrack GPU command:")
@@ -5179,7 +5180,7 @@ Tokens:  export IQM_TOKEN=...   export IBM_QUANTUM_TOKEN=...
     print(f"  │  Bits pinned : {pc}/{bits}")
     print(f"  │  Reduction   : {reduction:.1f}×")
     print(f"  │  Method      : Quantum walk interference density — measured values only")
-    print(f"  │  Please a Donation: 1Bu4CR8Bi5AXQG8pnu1avny88C5CCgWKfb")
+    print(f"  │  Please Any Donation: 1Bu4CR8Bi5AXQG8pnu1avny88C5CCgWKfb")
     print(f"  └────────────────────────────────────────────────────────────────────┘")
     print(f"")
     print(f"  BitCrack:")
