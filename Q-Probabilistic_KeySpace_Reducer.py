@@ -4639,10 +4639,9 @@ def interactive_main() -> None:
     # ── Input mode ─────────────────────────────────────────────────────────────
     print("  ┌─ INPUT MODE ─────────────────────────────────────────────────────┐")
     print("  │  [1]  Bitcoin P2PKH address only        (Hash160 — Mode1 Grover) │")
-    print("  │  [2]  Address  +  compressed public key    (hybrid — strong)     │")
-    print("  │  [3]  Compressed public key only           (strongest signal)    │")
+    print("  │  [2]  Address + Compressed public key   (hybrid — strong signal) │")
     print("  └───────────────────────────────────────────────────────────────────┘")
-    choice = _ask("Select input mode [1/2/3]", "3")
+    choice = _ask("Select input mode [1/2]", "1")
 
     if choice == "1":
         print("\n  ┌─ MODE [1] — ADDRESS ONLY ─────────────────────────────────────────┐")
@@ -4858,18 +4857,18 @@ def interactive_main() -> None:
         else f"Phase-kickback (crash-free, {bits}q > {_DIAG_MAX_BITS}q)"
     )
     print("\n  ┌─ GROVER-IPE PARAMETERS ───────────────────────────────────────────┐")
-    print("  │  IPE rounds       3=fast(min) · 4=default · 6=thorough           │")
+    print("  │  IPE rounds       3=fast(min) · 3=default · 6=thorough           │")
     print("  │  Grover shots     2048=fast · 4096=default · 8192=thorough        │")
     print("  │  Top-K candidates 32=fast · 4096=default(G-8) · 256=thorough      │")
     print(f"  │  Oracle (auto)    {oracle_info:<52} │")
     print("  └───────────────────────────────────────────────────────────────────┘")
-    n_ipe   = int(_ask("IPE rounds (≥3)",      "4"))
+    n_ipe   = int(_ask("IPE rounds (≥3)",      "3"))
     g_shots = int(_ask("Grover shots",         str(_def_shots)))
     g_topk  = int(_ask("Top-K candidates",    "4096"))
 
     # ── Multi-run ─────────────────────────────────────────────────────────────
     print("\n  ┌─ MULTI-RUN VOTING [G-6] ─────────────────────────────────────────┐")
-    print("  │  1=single run(default) · 3=good · 5=tighter · 10=tight+slow      │")
+    print("  │  1=single run(default)                                           │")
     print("  └───────────────────────────────────────────────────────────────────┘")
     n_runs   = int(_ask("Number of runs", "1"))
     shor_s1  = _ask("Enable S1 QFT Period Finding [Y/n]", "Y").upper().startswith("Y")
