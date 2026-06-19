@@ -1,7 +1,7 @@
 
 ## This is A Quantum Probabilistic Code That will Reduce The KeySpace of BTC Puzzles : [https://btcpuzzle.info/puzzle](https://privatekeys.pw/puzzles/bitcoin-puzzle-tx?table=0&status=all)
 𓏙𓏙𓏙𓏙𓋍𓄿𓋜𓐭𓃀𓂏𓉢𓆠𓆆𓂾𓐮𓋝𓅕𓊾𓊗𓅱𓂻𓃀𓅔𓐮𓋛𓏙𓏙𓏙𓏥 𓊃𓏥 𓏏𓏥 𓎡𓏥 𓏙𓏥 𓍯𓍯𓊃𓎡𓏤𓆣𓁹𓁹𓅔♕𓅇𓃵𓆉𓆌𓆓𓏏𓏥𓏥𓏥𓏙𓏙𓏙𓏙𓏙𓋍𓄿𓋜𓐭𓃀𓂏𓉢𓆠𓆆𓂾𓐮𓋝𓅕𓊾𓊗𓅱𓂻𓃀𓅔𓐮𓋛𓏙𓏙𓏙𓏙𓏙
-________________________________________________________________
+---
 
 Please Some Donations Please for my Next Quantum Project :
 
@@ -28,7 +28,7 @@ GUYS HERE IS THE RIGHT STEPS  !!!!
 For This Types of Probablistic Algorithms Better Using 
 
 Quantum_Probabilistic Camputer Hybrids like D-Waves Q-Machines:
----
+________________________________________________________________
 <img width="687" height="431" alt="Basic Fast Configs" src="https://raw.githubusercontent.com/threealgos/Quantum_KeySpace-Reducer/refs/heads/main/Recommended_Configs.png" />
 
 <img width="687" height="431" alt="Basic Fast Configs" src="https://raw.githubusercontent.com/threealgos/Quantum_KeySpace-Reducer/refs/heads/main/probabilistic_camputer.png" />
