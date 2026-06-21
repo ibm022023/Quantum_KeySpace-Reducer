@@ -1,7 +1,5 @@
-#Hi i Realy apperciated you get me A Donation here_ 1Bu4CR8Bi5AXQG8pnu1avny88C5CCgWKfb /////
-#============================================================================================
 #!/usr/bin/env python3
-
+# -*- coding: utf-8 -*-
 """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║  KEY-REDUCER · Quantum + P-Bit Keyspace Reducer · MERGED Edition v21       ║
@@ -456,55 +454,55 @@ PUZZLE_PRESETS: Dict[int, Dict] = {
     5:  {"start": 0x10,
          "end":   0x1F,
          "pub":   "02352bbf4a4cdd12564f93fa332ce333301d9ad40271f8107181340aef25be59d5",
-         "shots": 1024,   "layers": 3, "iters": 6,  "probes": 128},
+         "shots": 4096,   "layers": 3, "iters": 6,  "probes": 128},
     8:  {"start": 0x80,
          "end":   0xFF,
          "pub":   "0308bc89c2f919ed158885c35600844d49890905c79b357322609c45706ce6b514",
-         "shots": 8192,   "layers": 3, "iters": 8,  "probes": 256},
+         "shots": 4096,   "layers": 3, "iters": 8,  "probes": 256},
     14: {"start": 0x2000,
          "end":   0x3FFF,
          "pub":   "03b4f1de58b8b41afe9fd4e5ffbdafaeab86c5db4769c15d6e6011ae7351e54759",
-         "shots": 10000,  "layers": 4, "iters": 10, "probes": 512},
+         "shots": 4096,  "layers": 4, "iters": 10, "probes": 512},
     16: {"start": 0x8000,
          "end":   0xFFFF,
          "pub":   "029d8c5d35231d75eb87fd2c5f05f65281ed9573dc41853288c62ee94eb2590b7a",
-         "shots": 32768,  "layers": 4, "iters": 12, "probes": 512},
+         "shots": 4096,  "layers": 4, "iters": 12, "probes": 512},
     20: {"start": 0x80000,
          "end":   0xFFFFF,
          "pub":   "033c4a45cbd643ff97d77f41ea37e843648d50fd894b864b0d52febc62f6454f7c",
-         "shots": 32768,  "layers": 4, "iters": 12, "probes": 512},
+         "shots": 4096,  "layers": 4, "iters": 12, "probes": 512},
     21: {"start": 0x100000,
          "end":   0x1FFFFF,
          "pub":   "031a746c78f72754e0be046186df8a20cdce5c79b2eda76013c647af08d306e49e",
-         "shots": 32768,  "layers": 4, "iters": 12, "probes": 512},
+         "shots": 4096,  "layers": 4, "iters": 12, "probes": 512},
     24: {"start": 0x800000,
          "end":   0xFFFFFF,
          "pub":   "036ea839d22847ee1dce3bfc5b11f6cf785b0682db58c35b63d1342eb221c3490c",
-         "shots": 65536,  "layers": 4, "iters": 12, "probes": 512},
+         "shots": 4096,  "layers": 4, "iters": 12, "probes": 512},
     25: {"start": 0x1000000,
          "end":   0x1FFFFFF,
          "pub":   "03057fbea3a2623382628dde556b2a0698e32428d3cd225f3bd034dca82dd7455a",
-         "shots": 65536,  "layers": 4, "iters": 14, "probes": 512},
+         "shots": 4096,  "layers": 4, "iters": 14, "probes": 512},
     32: {"start": 0x80000000,
          "end":   0xFFFFFFFF,
          "pub":   "036ea839d22847ee1dce3bfc5b11f6cf785b0682db58c35b63d1342eb221c3490c",
-         "shots": 65536,  "layers": 5, "iters": 16, "probes": 1024},
+         "shots": 4096,  "layers": 5, "iters": 16, "probes": 1024},
     40: {"start": 0x8000000000,
          "end":   0xFFFFFFFFFF,
          "pub":   "03a2efa402fd5268400c77c20e574ba86409ededee7c4020e4b9f0edbee53de0d4",
-         "shots": 65536,  "layers": 5, "iters": 16, "probes": 1024},
+         "shots": 4096,  "layers": 5, "iters": 16, "probes": 1024},
     64: {"start": 0x8000000000000000,
          "end":   0xFFFFFFFFFFFFFFFF,
          "pub":   "03100611c54dfef604163b8358f7b7fac13ce478e02cb224ae16d45526b25d9d4d",
-         "shots": 65536,  "layers": 5, "iters": 16, "probes": 1024},
+         "shots": 4096,  "layers": 5, "iters": 16, "probes": 1024},
     71: {"start": 0x400000000000000000,
          "end":   0x7fffffffffffffffff,
          "pub":   None, # Use Hash160 Mod-1_Version
-         "shots": 65536,  "layers": 5, "iters": 16, "probes": 1024},
+         "shots": 4096,  "layers": 5, "iters": 16, "probes": 1024},
     135:{"start": 0x400000000000000000000000000000000,
          "end":   0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,
          "pub":   "02145d2611c823a396ef6712ce0f712f09b9b4f3135e3e0aa3230fb9b6d08d1e16",
-         "shots": 100000, "layers": 5, "iters": 20, "probes": 1024},
+         "shots": 4096, "layers": 5, "iters": 20, "probes": 1024},
 }
 
 
@@ -521,10 +519,10 @@ def _preset_shots(bits: int) -> int:
     return (PUZZLE_PRESETS.get(bits) or {}).get("shots", 4096)
 
 def _preset_layers(bits: int) -> int:
-    return (PUZZLE_PRESETS.get(bits) or {}).get("layers", 4)
+    return (PUZZLE_PRESETS.get(bits) or {}).get("layers", 5)
 
 def _preset_iters(bits: int) -> int:
-    return (PUZZLE_PRESETS.get(bits) or {}).get("iters", 12)
+    return (PUZZLE_PRESETS.get(bits) or {}).get("iters", 4)
 
 def _preset_probes(bits: int) -> int:
     return (PUZZLE_PRESETS.get(bits) or {}).get("probes", 512)
@@ -4038,1042 +4036,6 @@ def ec_period_resonance_attack(
     return all_pairs
 
 # =============================================================================
-# [PHASE F] QUANTUM SUPREMACY SMART SEARCH (QSSS) — v1
-# =============================================================================
-#
-# Fires AFTER reduce_keyspace() narrows the bracket to [start_r, end_r].
-# Attempts to FIND the hidden key INSIDE that bracket via six cascaded
-# quantum stages — each stage refines the candidate pool left by the previous.
-#
-# F1 — BRACKET RE-ISING          fresh Ising landscape inside sub-range only
-# F2 — DENSE QPB SWEEP           QPB v3 β:0.3→8.0 inside bracket, extra-cold
-# F3 — GROVER POWER AMPLIFICATION √(bracket/T) Grover rounds on shortlist
-# F4 — QUANTUM ZENO SQUEEZE       binary-halving with QPU energy verification
-# F5 — PHASE KICKBACK RESONANCE   per-candidate EC resonance scan (1-qubit)
-# F6 — CLASSICAL VERIFICATION     ranked classical sweep → key confirmation
-# =============================================================================
-
-import math as _math_qsss   # already imported but alias avoids any scope clash
-
-# ─── helper: ceil log2 clamped to device cap ─────────────────────────────────
-
-def _bracket_bits(bracket_size: int, max_bits: int) -> int:
-    """Number of qubits needed to address `bracket_size` states."""
-    if bracket_size <= 1:
-        return 1
-    return min(max_bits, max(1, math.ceil(math.log2(bracket_size + 1))))
-
-
-# =============================================================================
-# F1 — BRACKET RE-ISING
-# Re-probe Ising landscape with full Sobol density INSIDE the reduced bracket.
-# Returns (h_biases_sub, J_couplings_sub) tuned to the sub-range.
-# =============================================================================
-
-def _qsss_f1_reising(
-    start_r:    int,
-    end_r:      int,
-    bits_sub:   int,
-    target_h160: bytes,
-    pubkey_xy:  Optional[Tuple[int, int]],
-    pubkey_hex: Optional[str],
-    dxs_sub:    Optional[List[int]],
-    n_probes:   int = 1024,
-) -> Tuple[np.ndarray, np.ndarray]:
-    """
-    [F1] Re-run SparsePauliOp Ising probing inside [start_r, end_r].
-
-    Because the bracket is much smaller than the original range, the same
-    n_probes covers the sub-range at 100x–10000x higher density.
-    Returns (h_biases_sub, J_sub) for use by F2–F5.
-    """
-    log.info(f"  [QSSS-F1] Re-Ising  [{hex(start_r)}, {hex(end_r)}]  "
-             f"bits_sub={bits_sub}  probes={n_probes}")
-    try:
-        _, h_sub, J_sub = build_ising_hamiltonian(
-            bits=bits_sub,
-            base=start_r,
-            target_h160=target_h160,
-            pubkey_xy=pubkey_xy,
-            pubkey_hex=pubkey_hex,
-            n_probes=n_probes,
-            dxs=dxs_sub,
-        )
-        log.info(f"  [QSSS-F1] h∈[{h_sub.min():.3f},{h_sub.max():.3f}]  "
-                 f"J∈[{J_sub.min():.3f},{J_sub.max():.3f}]")
-        return h_sub, J_sub
-    except Exception as ex:
-        log.warning(f"  [QSSS-F1] failed: {ex} — zero biases")
-        return np.zeros(bits_sub), np.zeros(max(1, bits_sub - 1))
-
-
-# =============================================================================
-# F2 — DENSE QPB SWEEP
-# Run QPB v3 circuits with extra-cold annealing INSIDE the bracket.
-# β anneals from 0.3 (hot spread) → 8.0 (ultra-cold — near-deterministic).
-# =============================================================================
-
-def _qsss_f2_dense_qpb(
-    start_r:    int,
-    end_r:      int,
-    bits_sub:   int,
-    target_h160: bytes,
-    pubkey_xy:  Optional[Tuple[int, int]],
-    pubkey_hex: Optional[str],
-    h_sub:      np.ndarray,
-    J_sub:      np.ndarray,
-    dxs_sub:    Optional[List[int]],
-    shots:      int,
-    opt_level:  int,
-    backend_mode: str,
-    iqm_device: str,
-    iqm_token:  str,
-    ibm_token:  str,
-    ibm_crn:    str,
-    ibm_backend_name: str,
-    n_sweeps:   int = 4,
-    walk_steps: int = 5,
-) -> List[Tuple[float, int]]:
-    """
-    [F2] Dense QPB sweep inside the reduced bracket.
-
-    Runs n_sweeps QPB v3 circuits with annealing β: 0.3 → 8.0.
-    The ultra-cold end (β=8) makes sigmoid(β·I) → {0,1} sharply,
-    forcing the qubit into the committed state = best guess for that bit.
-    Returns (energy, absolute_key) pairs.
-    """
-    log.info(f"  [QSSS-F2] Dense QPB sweep  {n_sweeps} sweeps × {shots} shots  "
-             f"bits_sub={bits_sub}  β:0.3→8.0")
-
-    if not QISKIT_OK:
-        log.warning("  [QSSS-F2] Qiskit unavailable — skipped")
-        return []
-
-    bracket_size = max(1, end_r - start_r)
-    all_samples: List[Tuple[float, int]] = []
-
-    iqm_backend = None
-    if backend_mode == "iqm_hardware":
-        try:
-            iqm_backend = _get_iqm_backend_obj(iqm_device, iqm_token)
-        except Exception as ex:
-            log.warning(f"  [QSSS-F2 IQM] {ex} — Aer fallback")
-            backend_mode = "simulator"
-
-    for sweep_idx in range(n_sweeps):
-        # Per-sweep annealing: sweep 0 is hot (exploration), last is ultra-cold
-        progress = sweep_idx / max(n_sweeps - 1, 1)
-        beta_start_s = 0.3 + 1.5 * progress    # hotter early sweeps
-        beta_end_s   = 4.0 + 4.0 * progress    # colder later sweeps (up to 8.0)
-
-        # Noise decreases as sweeps progress (early: explore; late: exploit)
-        noise_scale = 0.08 * (1.0 - progress * 0.7)
-        h_v = h_sub + np.random.normal(0, noise_scale, len(h_sub))
-        J_v = J_sub + np.random.normal(0, noise_scale * 0.4, len(J_sub))
-
-        try:
-            key_r = QuantumRegister(bits_sub, "qpb_f2")
-            cr    = ClassicalRegister(bits_sub, "wc_f2")
-            qc    = QuantumCircuit(key_r, cr, name=f"QSSS_F2_sweep{sweep_idx}")
-            qc.h(key_r)  # hot start
-
-            steps = max(2, walk_steps + sweep_idx - n_sweeps // 2)
-            for step in range(steps):
-                step_prog = step / max(steps - 1, 1)
-                beta = beta_start_s + (beta_end_s - beta_start_s) * step_prog
-
-                # QPB gate per qubit
-                for b in range(bits_sub):
-                    I_b = float(h_v[b]) if b < len(h_v) else 0.0
-                    if dxs_sub is not None and b < len(dxs_sub):
-                        I_b += (1.0 - 2.0 * int(dxs_sub[b])) * 0.5 * step_prog
-                    I_b = float(np.clip(I_b, -8.0, 8.0))
-                    x = beta * I_b
-                    p_b = (1.0 / (1.0 + math.exp(-x)) if x >= 0
-                           else math.exp(x) / (1.0 + math.exp(x)))
-                    p_b = max(1e-7, min(1.0 - 1e-7, p_b))
-                    qc.ry(2.0 * math.asin(math.sqrt(p_b)), key_r[b])
-
-                # CRZ neighbor coupling
-                for b in range(min(bits_sub - 1, len(J_v))):
-                    w = float(J_v[b]) * beta
-                    if abs(w) > 1e-6:
-                        qc.crz(w, key_r[b], key_r[b + 1])
-                        qc.crz(w, key_r[b + 1], key_r[b])
-
-                # Skip-2 coupling
-                for b in range(min(bits_sub - 2, len(J_v))):
-                    w = float(J_v[b]) * beta * 0.5
-                    if abs(w) > 1e-6:
-                        qc.crz(w, key_r[b], key_r[b + 2])
-
-                # EC phase oracle
-                if dxs_sub is not None:
-                    ann = 0.4 + 0.6 * step_prog
-                    for b in range(bits_sub):
-                        phi = math.pi * (1.0 - 2.0 * int(dxs_sub[b])) * ann
-                        if abs(phi) > 1e-6:
-                            qc.rz(phi, key_r[b])
-
-            qc.measure(key_r, cr)
-            counts = _execute_circuit(qc, shots, opt_level,
-                                      backend_mode, iqm_backend, "wc_f2")
-
-            sweep_samples: List[Tuple[float, int]] = []
-            for bs, cnt in counts.items():
-                off_sub = int(bs.zfill(bits_sub)[-bits_sub:], 2)
-                k_abs   = start_r + off_sub
-                if k_abs > end_r:
-                    continue
-                energy = compute_energy(k_abs, target_h160, pubkey_xy, pubkey_hex)
-                bv     = np.array([(off_sub >> b) & 1 for b in range(bits_sub)],
-                                  dtype=float)
-                dot_n  = (float(np.dot(h_sub, bv)) + bits_sub) / (2.0 * bits_sub + 1e-9)
-                eff    = 0.70 * energy + 0.30 * (1.0 - dot_n)
-                w = max(1, min(cnt, 24))
-                for _ in range(w):
-                    sweep_samples.append((eff, k_abs))
-
-            all_samples.extend(sweep_samples)
-            best_e = min((e for e, _ in sweep_samples), default=1.0)
-            log.info(f"  [QSSS-F2 sweep {sweep_idx+1}/{n_sweeps}]  "
-                     f"β:{beta_start_s:.1f}→{beta_end_s:.1f}  "
-                     f"candidates={len(set(k for _, k in sweep_samples))}  "
-                     f"best_eff={best_e:.5f}")
-        except Exception as ex:
-            log.warning(f"  [QSSS-F2 sweep {sweep_idx+1}] error: {ex}")
-
-    log.info(f"  [QSSS-F2] Complete — {len(all_samples)} dense QPB samples  "
-             f"unique_k={len(set(k for _, k in all_samples))}")
-    return all_samples
-
-
-# =============================================================================
-# F3 — GROVER POWER AMPLIFICATION
-# Take the top-T QPB candidates and amplify their amplitude with Grover.
-# √(bracket_size / T) iterations give quadratic speedup over classical.
-# =============================================================================
-
-def _qsss_f3_grover_amplify(
-    start_r:    int,
-    end_r:      int,
-    bits_sub:   int,
-    top_candidates: List[int],          # absolute key values
-    target_h160: bytes,
-    pubkey_xy:  Optional[Tuple[int, int]],
-    pubkey_hex: Optional[str],
-    h_sub:      np.ndarray,
-    shots:      int,
-    opt_level:  int,
-    backend_mode: str,
-    iqm_device: str,
-    iqm_token:  str,
-    ibm_token:  str,
-    ibm_crn:    str,
-    ibm_backend_name: str,
-    top_t:      int = 32,
-    n_grover_reps: int = 2,
-) -> List[Tuple[float, int]]:
-    """
-    [F3] Grover Power Amplification on the dense-QPB shortlist.
-
-    Marks the top-T QPB candidates in a phase oracle (RZ-based, IQM-safe)
-    and applies sqrt(bracket/T) Grover iterations for amplitude amplification.
-    Each repetition runs a separate circuit with a different iteration count
-    to avoid the Grover over-rotation trap (exponential revival pattern).
-
-    Returns updated (energy, absolute_key) pairs with amplified probabilities.
-    """
-    if not QISKIT_OK or not top_candidates:
-        log.warning("  [QSSS-F3] No candidates or Qiskit unavailable — skipped")
-        return []
-
-    bracket_size = max(1, end_r - start_r)
-    marked_offs  = [k - start_r for k in top_candidates[:top_t]
-                    if start_r <= k <= end_r]
-    if not marked_offs:
-        log.warning("  [QSSS-F3] No valid marked offsets")
-        return []
-
-    # Optimal Grover iterations: π/4 * √(N/M)
-    N = 1 << bits_sub
-    M = max(1, len(marked_offs))
-    grover_opt = max(1, int(round(math.pi / 4.0 * math.sqrt(N / M))))
-
-    log.info(f"  [QSSS-F3] Grover amplify  bits_sub={bits_sub}  "
-             f"marked={M}  N={N}  opt_iters={grover_opt}  reps={n_grover_reps}")
-
-    iqm_backend = None
-    if backend_mode == "iqm_hardware":
-        try:
-            iqm_backend = _get_iqm_backend_obj(iqm_device, iqm_token)
-        except Exception as ex:
-            log.warning(f"  [QSSS-F3 IQM] {ex} — Aer fallback")
-            backend_mode = "simulator"
-
-    all_grover_samples: List[Tuple[float, int]] = []
-
-    vote = np.zeros(bits_sub, dtype=float)
-    for off in marked_offs:
-        for b in range(bits_sub):
-            if (off >> b) & 1:
-                vote[b] += 1.0
-    if vote.max() > 0:
-        vote /= vote.max()
-
-    diffuser = _build_diffuser(bits_sub)
-
-    for rep in range(n_grover_reps):
-        # Vary iteration count to avoid over-rotation (use 1, opt, 2*opt pattern)
-        iter_count = max(1, [1, grover_opt, min(2 * grover_opt, grover_opt + 3)][rep % 3])
-
-        try:
-            key_r = QuantumRegister(bits_sub, "gk")
-            cr    = ClassicalRegister(bits_sub, "gc")
-            qc    = QuantumCircuit(key_r, cr, name=f"QSSS_F3_rep{rep}")
-            qc.h(key_r)
-
-            # Bias toward marked region using h_sub (warm start)
-            for b in range(bits_sub):
-                ang = float(np.arccos(np.clip(-h_sub[b], -1.0, 1.0))) * 0.25
-                if abs(ang) > 1e-6:
-                    qc.ry(ang, key_r[b])
-
-            for _ in range(iter_count):
-                # Phase oracle — RZ-based marks every candidate with -1 phase
-                for off in marked_offs[:16]:  # cap at 16 to keep depth sane
-                    for b in range(bits_sub):
-                        if not ((off >> b) & 1):
-                            qc.x(key_r[b])
-                    if bits_sub == 1:
-                        qc.z(key_r[0])
-                    elif bits_sub == 2:
-                        qc.cz(key_r[0], key_r[1])
-                    else:
-                        qc.h(key_r[bits_sub - 1])
-                        qc.mcx(list(range(bits_sub - 1)), bits_sub - 1)
-                        qc.h(key_r[bits_sub - 1])
-                    for b in range(bits_sub):
-                        if not ((off >> b) & 1):
-                            qc.x(key_r[b])
-                # Grover diffuser
-                qc.append(diffuser, list(key_r))
-
-            qc.measure(key_r, cr)
-            counts = _execute_circuit(qc, shots, opt_level,
-                                      backend_mode, iqm_backend, "gc")
-
-            rep_samples: List[Tuple[float, int]] = []
-            for bs, cnt in counts.items():
-                off_sub = int(bs.zfill(bits_sub)[-bits_sub:], 2)
-                k_abs   = start_r + off_sub
-                if k_abs > end_r:
-                    continue
-                energy  = compute_energy(k_abs, target_h160, pubkey_xy, pubkey_hex)
-                is_top  = off_sub in marked_offs
-                amp_bonus = -0.05 if is_top else 0.0
-                w = max(1, min(cnt, 24))
-                for _ in range(w):
-                    rep_samples.append((energy + amp_bonus, k_abs))
-            all_grover_samples.extend(rep_samples)
-
-            best_e = min((e for e, _ in rep_samples), default=1.0)
-            log.info(f"  [QSSS-F3 rep {rep+1}/{n_grover_reps}]  "
-                     f"iters={iter_count}  "
-                     f"unique_hits={len(set(k for _, k in rep_samples))}  "
-                     f"best_e={best_e:.6f}")
-        except Exception as ex:
-            log.warning(f"  [QSSS-F3 rep {rep+1}] error: {ex}")
-
-    log.info(f"  [QSSS-F3] Complete — {len(all_grover_samples)} amplified samples")
-    return all_grover_samples
-
-
-# =============================================================================
-# F4 — QUANTUM ZENO BRACKET SQUEEZE
-# Binary halving of the bracket: split in two, run quick QPB in each half,
-# keep the half with lower mean energy. Repeat until target width reached.
-# Like Zeno's paradox — each step halves the remaining distance.
-# =============================================================================
-
-def _qsss_f4_zeno_squeeze(
-    start_r:    int,
-    end_r:      int,
-    target_h160: bytes,
-    pubkey_xy:  Optional[Tuple[int, int]],
-    pubkey_hex: Optional[str],
-    bits_orig:  int,
-    shots:      int,
-    opt_level:  int,
-    backend_mode: str,
-    iqm_device: str,
-    iqm_token:  str,
-    ibm_token:  str,
-    ibm_crn:    str,
-    ibm_backend_name: str,
-    max_rounds: int = 12,
-    zeno_target_bits: int = 6,    # stop when bracket ≤ 2^zeno_target_bits
-) -> Tuple[int, int, List[Tuple[float, int]]]:
-    """
-    [F4] Quantum Zeno Bracket Squeeze.
-
-    Each round:
-      1. Split bracket [lo, hi] into left half [lo, mid] and right [mid, hi].
-      2. Run a fast QPB walk (hot β: 0.5→3.0, 2 steps, 512 shots) in each half.
-      3. Compute mean energy for each half from the QPB histogram.
-      4. Keep the half with LOWER mean energy (key is in the lower-energy half).
-      5. Optional: if pubkey_xy known, verify true key is still inside.
-         If it fell outside due to noise, undo the split and try wider.
-
-    Terminates when:
-      - Bracket ≤ 2^zeno_target_bits keys (target reached)
-      - max_rounds reached
-      - Bracket degenerates to < 4 keys
-
-    Returns: (squeezed_start, squeezed_end, all_zeno_samples)
-    """
-    bracket_size = end_r - start_r
-    log.info(f"  [QSSS-F4] Zeno squeeze  [{hex(start_r)}, {hex(end_r)}]  "
-             f"size={bracket_size:,}  target≤2^{zeno_target_bits}  "
-             f"max_rounds={max_rounds}")
-
-    if not QISKIT_OK or bracket_size < 4:
-        log.warning("  [QSSS-F4] Bracket too small or Qiskit unavailable — skipped")
-        return start_r, end_r, []
-
-    iqm_backend = None
-    if backend_mode == "iqm_hardware":
-        try:
-            iqm_backend = _get_iqm_backend_obj(iqm_device, iqm_token)
-        except Exception as ex:
-            log.warning(f"  [QSSS-F4 IQM] {ex} — Aer fallback")
-            backend_mode = "simulator"
-
-    all_zeno_samples: List[Tuple[float, int]] = []
-    target_size = 1 << zeno_target_bits
-    lo, hi      = start_r, end_r
-
-    for rnd in range(max_rounds):
-        size = hi - lo
-        if size <= target_size or size < 4:
-            log.info(f"  [QSSS-F4] Target reached at round {rnd}  "
-                     f"[{hex(lo)}, {hex(hi)}]  size={size:,}")
-            break
-
-        mid = (lo + hi) // 2
-        halves = [(lo, mid, "LEFT"), (mid, hi, "RIGHT")]
-        half_energies: List[Tuple[float, int, int, str]] = []
-
-        for h_lo, h_hi, label in halves:
-            h_size   = h_hi - h_lo
-            if h_size < 1:
-                half_energies.append((1.0, h_lo, h_hi, label))
-                continue
-
-            h_bits = _bracket_bits(h_size, min(bits_orig, _MAX_AER_QUBITS - 1))
-            h_bits = max(1, h_bits)
-
-            try:
-                # Quick fresh Ising probe for this half
-                _, h_h, J_h = build_ising_hamiltonian(
-                    bits=h_bits, base=h_lo,
-                    target_h160=target_h160, pubkey_xy=pubkey_xy,
-                    pubkey_hex=pubkey_hex, n_probes=max(64, min(256, h_size // 4 + 16)),
-                )
-            except Exception:
-                h_h = np.zeros(h_bits); J_h = np.zeros(max(1, h_bits - 1))
-
-            try:
-                key_r = QuantumRegister(h_bits, "zk")
-                cr    = ClassicalRegister(h_bits, "zc")
-                qc    = QuantumCircuit(key_r, cr, name=f"Zeno_F4_{label[:1]}")
-                qc.h(key_r)
-
-                # 2-step QPB walk — fast
-                for step in range(2):
-                    ann = 0.3 + 0.7 * step
-                    beta = 0.5 + 2.5 * ann
-                    for b in range(h_bits):
-                        I_b = float(h_h[b]) if b < len(h_h) else 0.0
-                        I_b = float(np.clip(I_b, -6.0, 6.0))
-                        x   = beta * I_b
-                        p_b = (1.0/(1.0+math.exp(-x)) if x >= 0
-                               else math.exp(x)/(1.0+math.exp(x)))
-                        p_b = max(1e-7, min(1.0-1e-7, p_b))
-                        qc.ry(2.0 * math.asin(math.sqrt(p_b)), key_r[b])
-                    for b in range(min(h_bits-1, len(J_h))):
-                        w = float(J_h[b]) * beta
-                        if abs(w) > 1e-6:
-                            qc.crz(w, key_r[b], key_r[b+1])
-
-                qc.measure(key_r, cr)
-                zeno_shots = max(256, min(shots // 4, 1024))
-                counts = _execute_circuit(qc, zeno_shots, opt_level,
-                                          backend_mode, iqm_backend, "zc")
-
-                # Compute mean energy of this half's QPB histogram
-                energies_half = []
-                for bs, cnt in counts.items():
-                    off_sub = int(bs.zfill(h_bits)[-h_bits:], 2)
-                    k_abs   = h_lo + off_sub
-                    if k_abs > h_hi:
-                        continue
-                    e = compute_energy(k_abs, target_h160, pubkey_xy, pubkey_hex)
-                    for _ in range(max(1, min(cnt, 12))):
-                        energies_half.append(e)
-                        all_zeno_samples.append((e, k_abs))
-
-                mean_e = float(np.mean(energies_half)) if energies_half else 1.0
-                half_energies.append((mean_e, h_lo, h_hi, label))
-                log.info(f"  [QSSS-F4 rnd{rnd+1}] {label}  "
-                         f"[{hex(h_lo)},{hex(h_hi)}]  mean_e={mean_e:.6f}")
-            except Exception as ex:
-                log.warning(f"  [QSSS-F4 rnd{rnd+1}] {label} QPB error: {ex}")
-                # Classical energy sampling as fallback
-                n_probe = min(64, h_size)
-                step_p  = max(1, h_size // n_probe)
-                e_list  = [compute_energy(h_lo + j * step_p, target_h160,
-                                          pubkey_xy, pubkey_hex)
-                           for j in range(n_probe)]
-                half_energies.append((float(np.mean(e_list)), h_lo, h_hi, label))
-
-        if len(half_energies) < 2:
-            break
-
-        # Pick the lower-energy half
-        half_energies.sort(key=lambda x: x[0])
-        best_e_val, best_lo, best_hi, best_label = half_energies[0]
-        worse_e_val = half_energies[1][0]
-
-        # Sanity guard: if pubkey_xy is known, verify key is still inside
-        if pubkey_xy is not None:
-            # We don't know the true key, but we can check energy at midpoint
-            # as a proxy: if best half has much lower energy → confident choice
-            energy_gap = worse_e_val - best_e_val
-            if energy_gap < 1e-8:
-                # Energies identical — use size preference (keep larger half safer)
-                log.info(f"  [QSSS-F4 rnd{rnd+1}] Energy gap too small ({energy_gap:.2e}) "
-                         f"— keeping full bracket")
-                break
-
-        lo, hi = best_lo, best_hi
-        size_new = hi - lo
-        log.info(f"  [QSSS-F4 rnd{rnd+1}] Kept {best_label}  "
-                 f"[{hex(lo)},{hex(hi)}]  size={size_new:,}  "
-                 f"Δe={worse_e_val-best_e_val:.6f}")
-
-    log.info(f"  [QSSS-F4] Squeezed to [{hex(lo)},{hex(hi)}]  "
-             f"size={hi-lo:,}")
-    return lo, hi, all_zeno_samples
-
-
-# =============================================================================
-# F5 — PHASE KICKBACK RESONANCE SCAN
-# For each top candidate k, build a 1-qubit ancilla + key circuit.
-# |+⟩_ancilla ⊗ |k⟩_key → apply EC-phase-kickback → measure ancilla in X basis.
-# ⟨X⟩ = cos(EC_dist_angle) → 1.0 when k = target (perfect resonance).
-# =============================================================================
-
-def _qsss_f5_resonance_scan(
-    candidates_abs: List[int],      # absolute key values to scan
-    start_r:    int,
-    end_r:      int,
-    bits_sub:   int,
-    target_h160: bytes,
-    pubkey_xy:  Optional[Tuple[int, int]],
-    pubkey_hex: Optional[str],
-    h_sub:      np.ndarray,
-    dxs_sub:    Optional[List[int]],
-    shots:      int,
-    opt_level:  int,
-    backend_mode: str,
-    iqm_device: str,
-    iqm_token:  str,
-    ibm_token:  str,
-    ibm_crn:    str,
-    ibm_backend_name: str,
-    top_n:      int = 64,
-) -> List[Tuple[float, int]]:
-    """
-    [F5] Phase Kickback Resonance Scan.
-
-    For each candidate key k, encodes it as a fixed state |k_bits⟩ and
-    applies a controlled-EC-phase gate driven by the pubkey x-coordinate.
-    The ancilla qubit acts as a resonance detector:
-
-      |+⟩ ⊗ |k_bits⟩ → (I ⊗ U_k) → H ⊗ I → measure ancilla
-
-      U_k = ⊗_b RZ(φ_b) where φ_b = π · (1 - 2·dxs[b]) · (dist from target)
-
-    When k = target key: all φ_b → 0 → ancilla measures |0⟩ with prob 1.
-    When k ≠ target:     φ_b ≠ 0 → ancilla measures |1⟩ with some prob.
-
-    The "resonance score" = P(|0⟩ ancilla) → 1 only at the true key.
-    Combined with classical EC energy → tightest possible ranking.
-
-    Works even in hash-only mode: uses h_biases as the phase signal.
-    """
-    if not QISKIT_OK or not candidates_abs:
-        log.warning("  [QSSS-F5] Skipped — no candidates or Qiskit unavailable")
-        return []
-
-    scan_cands = [k for k in candidates_abs[:top_n]
-                  if start_r <= k <= end_r]
-    if not scan_cands:
-        log.warning("  [QSSS-F5] No candidates in bracket range")
-        return []
-
-    log.info(f"  [QSSS-F5] Resonance scan  {len(scan_cands)} candidates  "
-             f"bits_sub={bits_sub}  shots/cand={max(128, shots // len(scan_cands))}")
-
-    iqm_backend = None
-    if backend_mode == "iqm_hardware":
-        try:
-            iqm_backend = _get_iqm_backend_obj(iqm_device, iqm_token)
-        except Exception as ex:
-            log.warning(f"  [QSSS-F5 IQM] {ex} — Aer fallback")
-            backend_mode = "simulator"
-
-    per_shots = max(128, shots // max(len(scan_cands), 1))
-    resonance_scores: List[Tuple[float, int]] = []
-
-    for k_abs in scan_cands:
-        off_sub = k_abs - start_r
-        try:
-            # Build resonance circuit: ancilla + key register
-            anc_r = QuantumRegister(1, "anc_f5")
-            key_r = QuantumRegister(bits_sub, "key_f5")
-            cr    = ClassicalRegister(1, "rc_f5")
-            qc    = QuantumCircuit(anc_r, key_r, cr, name="QSSS_F5_res")
-
-            # Ancilla starts in |+⟩
-            qc.h(anc_r[0])
-
-            # Key register: encode candidate k as a fixed product state |k_bits⟩
-            # Each qubit set to |1⟩ if that bit of k is 1, |0⟩ otherwise
-            for b in range(bits_sub):
-                if (off_sub >> b) & 1:
-                    qc.x(key_r[b])
-
-            # EC phase kickback: controlled-RZ from ancilla to key qubits
-            # The phase encodes how far this candidate is from the target bit pattern
-            if dxs_sub is not None:
-                for b in range(bits_sub):
-                    # Target bit value for position b
-                    target_bit = int(dxs_sub[b]) if b < len(dxs_sub) else 0
-                    cand_bit   = (off_sub >> b) & 1
-                    # Phase is 0 when they match (resonance), π when they differ
-                    phi = math.pi * abs(cand_bit - target_bit)
-                    if abs(phi) > 1e-6:
-                        qc.crz(phi, anc_r[0], key_r[b])
-            else:
-                # Hash mode: use h_biases as phase proxy
-                for b in range(bits_sub):
-                    cand_bit = (off_sub >> b) & 1
-                    bias_signal = float(h_sub[b]) if b < len(h_sub) else 0.0
-                    phi = math.pi * float(abs(bias_signal)) * (1.0 - 2.0 * cand_bit) * 0.5
-                    if abs(phi) > 1e-6:
-                        qc.crz(phi, anc_r[0], key_r[b])
-
-            # Hadamard on ancilla → X-basis measurement
-            qc.h(anc_r[0])
-            qc.measure(anc_r[0], cr[0])
-
-            counts = _execute_circuit(qc, per_shots, opt_level,
-                                      backend_mode, iqm_backend, "rc_f5")
-
-            # P(|0⟩) = resonance score: 1.0 = perfect resonance = key found
-            total_s  = sum(counts.values())
-            zero_cnt = counts.get("0", 0)
-            p_zero   = zero_cnt / max(total_s, 1)   # resonance: higher = better
-
-            # Combine: classical energy + resonance score
-            classical_e  = compute_energy(k_abs, target_h160, pubkey_xy, pubkey_hex)
-            combined_e   = 0.45 * classical_e + 0.55 * (1.0 - p_zero)
-
-            resonance_scores.append((combined_e, k_abs))
-
-            if combined_e < 0.02 or p_zero > 0.95:
-                log.info(f"  [QSSS-F5] 🌟 HIGH RESONANCE  k={hex(k_abs)}  "
-                         f"P(|0⟩)={p_zero:.4f}  combined_e={combined_e:.6f}")
-            elif (len(scan_cands) <= 10 or scan_cands.index(k_abs) % 8 == 0):
-                log.info(f"  [QSSS-F5] k={hex(k_abs)}  "
-                         f"P(|0⟩)={p_zero:.4f}  combined_e={combined_e:.6f}")
-
-        except Exception as ex:
-            log.debug(f"  [QSSS-F5] k={hex(k_abs)} error: {ex}")
-            e_cls = compute_energy(k_abs, target_h160, pubkey_xy, pubkey_hex)
-            resonance_scores.append((e_cls, k_abs))
-
-    resonance_scores.sort(key=lambda x: x[0])
-    log.info(f"  [QSSS-F5] Complete — {len(resonance_scores)} resonance scores  "
-             f"best: k={hex(resonance_scores[0][1])}  "
-             f"combined_e={resonance_scores[0][0]:.6f}" if resonance_scores else "")
-    return resonance_scores
-
-
-# =============================================================================
-# F6 — CLASSICAL VERIFICATION SWEEP
-# Ranked classical verification of top QSSS candidates.
-# This is the only stage that can CONFIRM the key with certainty.
-# =============================================================================
-
-def _qsss_f6_verify(
-    ranked_candidates: List[int],   # absolute key values, best first
-    target_h160: bytes,
-    pubkey_xy:  Optional[Tuple[int, int]],
-    pubkey_hex: Optional[str],
-    max_verify: int = 2048,
-    zeno_start: int = 0,
-    zeno_end:   int = 0,
-) -> Optional[int]:
-    """
-    [F6] Classical Verification Sweep.
-
-    Takes the quantum-ranked candidate list and verifies each one:
-    - Pubkey mode: _pubkey_point(k) == pubkey_xy
-    - Hash mode:   _k_to_hash160(k) == target_h160
-
-    Verifies up to max_verify candidates in ranked order.
-    If the exact key is found → returns it immediately.
-    Otherwise returns None (bracket is the output).
-
-    Also performs a fast sequential sweep of any gap < 4096 keys
-    that might have been missed by the quantum engines.
-    """
-    log.info(f"  [QSSS-F6] Classical verify  {len(ranked_candidates)} candidates  "
-             f"max={max_verify}")
-
-    verified = 0
-    for k in ranked_candidates[:max_verify]:
-        try:
-            if pubkey_xy is not None:
-                pt = _pubkey_point(k)
-                if pt is not None and pt[0] == pubkey_xy[0] and pt[1] == pubkey_xy[1]:
-                    log.info(f"  [QSSS-F6] 🎉 KEY FOUND via pubkey match!  k={hex(k)}")
-                    return k
-            elif target_h160 and target_h160 != b'\x00' * 20:
-                if _k_to_hash160(k) == target_h160:
-                    log.info(f"  [QSSS-F6] 🎉 KEY FOUND via hash160 match!  k={hex(k)}")
-                    return k
-            verified += 1
-            if verified % 256 == 0:
-                log.info(f"  [QSSS-F6] Verified {verified}/{min(len(ranked_candidates), max_verify)}…")
-        except Exception as ex:
-            log.debug(f"  [QSSS-F6] k={hex(k)} error: {ex}")
-            continue
-
-    # Gap sweep: if the Zeno bracket is very tight (≤ 4096), scan it fully
-    if zeno_end > zeno_start:
-        gap_size = zeno_end - zeno_start
-        if gap_size <= 4096:
-            log.info(f"  [QSSS-F6] Gap sweep  [{hex(zeno_start)}, {hex(zeno_end)}]  "
-                     f"size={gap_size}")
-            verified_set = set(ranked_candidates[:max_verify])
-            for k in range(zeno_start, zeno_end + 1):
-                if k in verified_set:
-                    continue    # already checked above
-                try:
-                    if pubkey_xy is not None:
-                        pt = _pubkey_point(k)
-                        if pt is not None and pt[0] == pubkey_xy[0] and pt[1] == pubkey_xy[1]:
-                            log.info(f"  [QSSS-F6] 🎉 KEY FOUND in gap sweep!  k={hex(k)}")
-                            return k
-                    elif target_h160 and target_h160 != b'\x00' * 20:
-                        if _k_to_hash160(k) == target_h160:
-                            log.info(f"  [QSSS-F6] 🎉 KEY FOUND in gap sweep!  k={hex(k)}")
-                            return k
-                except Exception:
-                    continue
-
-    log.info(f"  [QSSS-F6] No exact key found in top {verified} candidates")
-    return None
-
-
-# =============================================================================
-# QSSS MASTER — run_quantum_supremacy_search()
-# Orchestrates F1→F2→F3→F4→F5→F6
-# =============================================================================
-
-def run_quantum_supremacy_search(
-    start_r:    int,
-    end_r:      int,
-    bits:       int,
-    target_h160: bytes,
-    pubkey_xy:  Optional[Tuple[int, int]] = None,
-    pubkey_hex: Optional[str] = None,
-    shots:      int = 4096,
-    opt_level:  int = 1,
-    backend_mode: str = "simulator",
-    iqm_device: str = "garnet",
-    iqm_token:  str = "",
-    ibm_token:  str = "",
-    ibm_crn:    str = "",
-    ibm_backend_name: str = _IBM_DEFAULT_BACKEND,
-    n_probes_f1: int = 1024,
-    n_sweeps_f2: int = 4,
-    top_t_f3:   int = 32,
-    n_grover_reps_f3: int = 2,
-    max_rounds_f4: int = 12,
-    zeno_target_bits: int = 6,
-    top_n_f5:   int = 64,
-    max_verify_f6: int = 2048,
-    address:    str = "",
-    iqm_device_label: str = "garnet",
-    save_qsss_report: bool = True,
-) -> Tuple[Optional[int], int, int, List[int]]:
-    """
-    [QSSS] Quantum Supremacy Smart Search — full six-stage cascade.
-
-    Parameters
-    ──────────
-    start_r, end_r   : reduced bracket from reduce_keyspace()
-    bits             : original key bit length (for device cap logic)
-    target_h160      : 20-byte hash160 of the target address
-    pubkey_xy        : (x, y) decompressed pubkey — enables EC-mode (stronger)
-    pubkey_hex       : hex pubkey string (informational)
-
-    Returns
-    ───────
-    (found_key, squeezed_start, squeezed_end, top10_candidates)
-      found_key = int if QSSS pinpointed the exact key, else None
-      squeezed_start / squeezed_end = tightest bracket after Zeno squeeze
-      top10_candidates = top-10 QSSS-ranked absolute key values
-
-    Notes
-    ─────
-    - All stages fall back gracefully: if a QPU job fails, the stage
-      uses classical energy scoring and passes results to the next stage.
-    - QSSS never re-runs Phase A–E — it takes the already-reduced
-      bracket as input and refines INSIDE it.
-    - Runtime is proportional to bracket_size / shots; for brackets
-      ≤ 2^20 and shots=4096 this typically takes 3–8 QPU jobs.
-    """
-    bracket_size = max(1, end_r - start_r)
-    if bracket_size < 2:
-        log.info(f"  [QSSS] Bracket size=1 — single candidate: k={hex(start_r)}")
-        found = _qsss_f6_verify([start_r], target_h160, pubkey_xy, pubkey_hex, 1,
-                                 start_r, end_r)
-        return found, start_r, end_r, [start_r]
-
-    log.info("=" * 72)
-    log.info(f"  [QSSS] QUANTUM SUPREMACY SMART SEARCH  v1")
-    log.info(f"  [QSSS] Bracket: [{hex(start_r)}, {hex(end_r)}]  size={bracket_size:,}")
-    log.info(f"  [QSSS] Mode: {'EC-pubkey (strong)' if pubkey_xy else 'hash160'}")
-    log.info("=" * 72)
-
-    t0 = time.perf_counter()
-
-    # Compute bracket_bits: how many qubits to address the sub-range
-    if backend_mode in ("iqm_hardware", "qrisp_iqm"):
-        max_q = _MAX_IQM_CIRCUIT
-    elif backend_mode == "ibm_hardware":
-        max_q = _MAX_IBM_QUBITS
-    else:
-        max_q = _MAX_AER_QUBITS
-
-    bits_sub = _bracket_bits(bracket_size, min(bits, max_q - 1))
-    bits_sub = max(2, bits_sub)
-
-    log.info(f"  [QSSS] bits_sub={bits_sub}  "
-             f"(addressing {1<<bits_sub} states for bracket of {bracket_size:,})")
-
-    # Sub-range dxs (EC delta hints re-computed for the sub-range)
-    dxs_sub: Optional[List[int]] = None
-    if pubkey_xy is not None:
-        try:
-            dxs_sub, _ = precompute_deltas(pubkey_xy, start_r, bits_sub)
-        except Exception as ex:
-            log.warning(f"  [QSSS] dxs_sub failed: {ex}")
-
-    # ── F1: Re-Ising ─────────────────────────────────────────────────────────
-    h_sub, J_sub = _qsss_f1_reising(
-        start_r, end_r, bits_sub,
-        target_h160, pubkey_xy, pubkey_hex, dxs_sub, n_probes_f1,
-    )
-
-    # ── F2: Dense QPB Sweep ───────────────────────────────────────────────────
-    f2_samples = _qsss_f2_dense_qpb(
-        start_r, end_r, bits_sub,
-        target_h160, pubkey_xy, pubkey_hex,
-        h_sub, J_sub, dxs_sub,
-        shots=shots, opt_level=opt_level,
-        backend_mode=backend_mode, iqm_device=iqm_device, iqm_token=iqm_token,
-        ibm_token=ibm_token, ibm_crn=ibm_crn, ibm_backend_name=ibm_backend_name,
-        n_sweeps=n_sweeps_f2, walk_steps=max(3, bits_sub // 3),
-    )
-
-    # Build Top-T shortlist for F3 (deduplicated, sorted by energy)
-    f2_ranked = sorted(set(k for _, k in f2_samples),
-                       key=lambda k: compute_energy(k, target_h160, pubkey_xy, pubkey_hex))
-    top_t_cands = f2_ranked[:top_t_f3]
-
-    log.info(f"  [QSSS] F2→F3 shortlist: {len(top_t_cands)} candidates  "
-             f"best_k={hex(top_t_cands[0]) if top_t_cands else 'N/A'}")
-
-    # ── F3: Grover Power Amplification ────────────────────────────────────────
-    f3_samples = _qsss_f3_grover_amplify(
-        start_r, end_r, bits_sub,
-        top_t_cands, target_h160, pubkey_xy, pubkey_hex, h_sub,
-        shots=shots, opt_level=opt_level,
-        backend_mode=backend_mode, iqm_device=iqm_device, iqm_token=iqm_token,
-        ibm_token=ibm_token, ibm_crn=ibm_crn, ibm_backend_name=ibm_backend_name,
-        top_t=top_t_f3, n_grover_reps=n_grover_reps_f3,
-    )
-
-    # Merge F2 + F3 for F4 input
-    all_f23 = f2_samples + f3_samples
-    f23_ranked = sorted(set(k for _, k in all_f23),
-                        key=lambda k: compute_energy(k, target_h160, pubkey_xy, pubkey_hex))
-
-    # ── F4: Quantum Zeno Bracket Squeeze ──────────────────────────────────────
-    zeno_start, zeno_end, f4_samples = _qsss_f4_zeno_squeeze(
-        start_r, end_r,
-        target_h160, pubkey_xy, pubkey_hex, bits,
-        shots=shots, opt_level=opt_level,
-        backend_mode=backend_mode, iqm_device=iqm_device, iqm_token=iqm_token,
-        ibm_token=ibm_token, ibm_crn=ibm_crn, ibm_backend_name=ibm_backend_name,
-        max_rounds=max_rounds_f4, zeno_target_bits=zeno_target_bits,
-    )
-
-    # Keep only F2/F3 candidates that survived inside the Zeno bracket
-    zeno_survivors = [k for k in f23_ranked if zeno_start <= k <= zeno_end]
-    if not zeno_survivors:
-        # Zeno was too aggressive — fall back to full F2/F3 ranking
-        log.warning(f"  [QSSS] Zeno survivors empty — using full F2/F3 ranking")
-        zeno_survivors = f23_ranked
-
-    # Add F4 samples to the pool too
-    f4_ranked = sorted(set(k for _, k in f4_samples if zeno_start <= k <= zeno_end),
-                       key=lambda k: compute_energy(k, target_h160, pubkey_xy, pubkey_hex))
-    merged_for_f5 = list(dict.fromkeys(zeno_survivors + f4_ranked))
-
-    log.info(f"  [QSSS] Zeno bracket: [{hex(zeno_start)}, {hex(zeno_end)}]  "
-             f"size={zeno_end-zeno_start:,}  survivors={len(merged_for_f5)}")
-
-    # ── F5: Phase Kickback Resonance Scan ─────────────────────────────────────
-    # Recompute bits_sub for the Zeno bracket
-    zeno_size = max(1, zeno_end - zeno_start)
-    bits_sub_z = _bracket_bits(zeno_size, min(bits, max_q - 2))
-    bits_sub_z = max(2, bits_sub_z)
-
-    dxs_sub_z: Optional[List[int]] = None
-    if pubkey_xy is not None:
-        try:
-            dxs_sub_z, _ = precompute_deltas(pubkey_xy, zeno_start, bits_sub_z)
-        except Exception:
-            dxs_sub_z = dxs_sub  # fall back to original
-
-    h_sub_z, J_sub_z = _qsss_f1_reising(
-        zeno_start, zeno_end, bits_sub_z,
-        target_h160, pubkey_xy, pubkey_hex, dxs_sub_z,
-        n_probes=max(128, min(512, zeno_size // 4 + 32)),
-    )
-
-    f5_scores = _qsss_f5_resonance_scan(
-        merged_for_f5, zeno_start, zeno_end, bits_sub_z,
-        target_h160, pubkey_xy, pubkey_hex,
-        h_sub_z, dxs_sub_z,
-        shots=shots, opt_level=opt_level,
-        backend_mode=backend_mode, iqm_device=iqm_device, iqm_token=iqm_token,
-        ibm_token=ibm_token, ibm_crn=ibm_crn, ibm_backend_name=ibm_backend_name,
-        top_n=min(top_n_f5, len(merged_for_f5)),
-    )
-
-    # Final ranking: sort by combined resonance + energy score
-    if f5_scores:
-        f5_scores.sort(key=lambda x: x[0])
-        final_ranked = [k for _, k in f5_scores]
-    else:
-        # F5 failed — fall back to classical energy ranking of merged pool
-        final_ranked = sorted(set(merged_for_f5),
-                              key=lambda k: compute_energy(k, target_h160,
-                                                           pubkey_xy, pubkey_hex))
-
-    top10 = final_ranked[:10]
-
-    elapsed_f1f5 = time.perf_counter() - t0
-
-    log.info(f"  [QSSS] F1–F5 complete  ({elapsed_f1f5:.1f}s)")
-    log.info(f"  [QSSS] Top-10 candidates after resonance ranking:")
-    for rank, k in enumerate(top10):
-        e_cls = compute_energy(k, target_h160, pubkey_xy, pubkey_hex)
-        log.info(f"    #{rank+1}: {hex(k)}  EC_energy={e_cls:.8f}")
-
-    # ── F6: Classical Verification ────────────────────────────────────────────
-    found_key = _qsss_f6_verify(
-        final_ranked, target_h160, pubkey_xy, pubkey_hex,
-        max_verify_f6, zeno_start, zeno_end,
-    )
-
-    elapsed_total = time.perf_counter() - t0
-
-    # ── QSSS Report ───────────────────────────────────────────────────────────
-    if save_qsss_report:
-        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-        report_fn = f"qsss_report_{bits}bit_{ts}.txt"
-        try:
-            with open(report_fn, "w", encoding="utf-8") as rf:
-                rf.write("=" * 80 + "\n")
-                rf.write("QUANTUM SUPREMACY SMART SEARCH (QSSS) — REPORT v1\n")
-                rf.write("=" * 80 + "\n\n")
-                rf.write(f"Timestamp      : {datetime.now()}\n")
-                rf.write(f"Backend        : {backend_mode}  device: {iqm_device_label}\n")
-                rf.write(f"Input bracket  : [{hex(start_r)}, {hex(end_r)}]  "
-                         f"size={bracket_size:,}\n")
-                rf.write(f"Zeno bracket   : [{hex(zeno_start)}, {hex(zeno_end)}]  "
-                         f"size={zeno_end-zeno_start:,}\n")
-                rf.write(f"Reduction      : {bracket_size // max(1, zeno_end-zeno_start):.0f}x "
-                         f"(QSSS vs input bracket)\n")
-                rf.write(f"Key found      : {'YES — ' + hex(found_key) if found_key else 'NOT found in top candidates'}\n")
-                rf.write(f"Elapsed        : {elapsed_total:.1f}s\n\n")
-                rf.write("TOP-10 QSSS CANDIDATES (quantum-ranked):\n")
-                for rank, k in enumerate(top10):
-                    e_cls = compute_energy(k, target_h160, pubkey_xy, pubkey_hex)
-                    verified_str = ""
-                    if found_key == k:
-                        verified_str = "  ← ✅ KEY FOUND"
-                    rf.write(f"  #{rank+1:2d}: {hex(k):<30}  EC_energy={e_cls:.8f}{verified_str}\n")
-                rf.write("\n")
-                rf.write("BitCrack (Zeno bracket):\n")
-                rf.write(f"  bitcrack --keyspace {hex(zeno_start)}:{hex(zeno_end)} "
-                         f"{address or '<address>'}\n")
-                rf.write("KeyHunt (Zeno bracket):\n")
-                rf.write(f"  keyhunt -m bsgs -r {hex(zeno_start)}:{hex(zeno_end)}\n")
-                rf.write("=" * 80 + "\n")
-            log.info(f"  [QSSS] Report → {report_fn}")
-        except Exception as ex:
-            log.warning(f"  [QSSS] Report save failed: {ex}")
-
-    # ── Final output ──────────────────────────────────────────────────────────
-    if found_key is not None:
-        print(f"\n  {'='*68}")
-        print(f"  🏆  QUANTUM SUPREMACY SMART SEARCH — KEY FOUND!")
-        print(f"  {'='*68}")
-        print(f"  Private key (hex)  : {hex(found_key)}")
-        print(f"  Private key (dec)  : {found_key}")
-        print(f"  Found in           : {elapsed_total:.1f}s")
-        print(f"  Verified by        : {'EC point match' if pubkey_xy else 'hash160 match'}")
-        print(f"  {'='*68}\n")
-    else:
-        reduction_qsss = bracket_size // max(1, zeno_end - zeno_start)
-        print(f"\n  {'─'*68}")
-        print(f"  [QSSS] Key not confirmed in top {min(max_verify_f6, len(final_ranked))} candidates")
-        print(f"  [QSSS] Tightest quantum bracket (Zeno): [{hex(zeno_start)}, {hex(zeno_end)}]")
-        print(f"  [QSSS] QSSS reduction vs input bracket : {reduction_qsss:.0f}x")
-        print(f"  [QSSS] Top-5 candidates:")
-        for rank, k in enumerate(top10[:5]):
-            e = compute_energy(k, target_h160, pubkey_xy, pubkey_hex)
-            print(f"          #{rank+1}: {hex(k)}  EC_energy={e:.8f}")
-        print(f"  {'─'*68}\n")
-
-    log.info(f"  [QSSS] Total elapsed: {elapsed_total:.1f}s  "
-             f"found={'YES '+hex(found_key) if found_key else 'NO'}")
-
-    return found_key, zeno_start, zeno_end, top10
-
-
-# =============================================================================
 # MASTER ORCHESTRATOR — reduce_keyspace()
 # =============================================================================
 
@@ -5101,17 +4063,6 @@ def reduce_keyspace(
     use_shor_s3:         bool = True,
     full_start_override: int = 0,
     full_end_override:   int = 0,
-    # ── [PHASE F] QSSS — Quantum Supremacy Smart Search ─────────────────────
-    run_qsss:            bool = True,   # Fire Phase F after bracket is found
-    qsss_shots:          int  = 0,      # 0 = use same as `shots`
-    qsss_n_sweeps_f2:    int  = 4,      # F2 dense QPB sweep count
-    qsss_top_t_f3:       int  = 32,     # F3 Grover shortlist size
-    qsss_n_grover_reps:  int  = 2,      # F3 Grover circuit repetitions
-    qsss_max_rounds_f4:  int  = 12,     # F4 Zeno halving rounds
-    qsss_zeno_bits:      int  = 6,      # F4 target bracket width (2^N keys)
-    qsss_top_n_f5:       int  = 64,     # F5 resonance scan top-N
-    qsss_max_verify:     int  = 2048,   # F6 classical verification limit
-    qsss_n_probes_f1:    int  = 1024,   # F1 re-Ising probe count
 ) -> Tuple[int, int, List[str], np.ndarray]:
     """
     Full pipeline A→B→B2→C→D→E.
@@ -5518,103 +4469,6 @@ def reduce_keyspace(
         export_kangaroo(start_r, end_r, bits, pubkey_xy, shift,
                         address, iqm_device=iqm_device)
 
-    # =========================================================================
-    # [PHASE F] QUANTUM SUPREMACY SMART SEARCH (QSSS)
-    # =========================================================================
-    # Fires INSIDE the already-reduced bracket [start_r, end_r].
-    # Six-stage cascade: F1 Re-Ising → F2 Dense QPB → F3 Grover Amplify
-    #                  → F4 Zeno Squeeze → F5 Resonance Scan → F6 Verify
-    # If QSSS finds the exact key it prints it and exits early.
-    # Otherwise it outputs an even tighter bracket + top-10 ranked list.
-    # =========================================================================
-    _qsss_active = (
-        run_qsss
-        and (start_r < end_r)                          # valid bracket
-        and (pubkey_xy is not None                      # EC mode
-             or (target_h160 and target_h160 != b'\x00' * 20))  # hash mode
-        and mode1_found_offset is None                 # not already solved
-    )
-
-    if _qsss_active:
-        log.info("")
-        log.info("━" * 72)
-        log.info("  [PHASE F] QUANTUM SUPREMACY SMART SEARCH — firing on bracket")
-        log.info(f"  [PHASE F] Input: [{hex(start_r)}, {hex(end_r)}]  "
-                 f"size={end_r-start_r:,}")
-        log.info("━" * 72)
-        _qsss_shots = qsss_shots if qsss_shots > 0 else shots
-        try:
-            _found_key, _zeno_s, _zeno_e, _top10 = run_quantum_supremacy_search(
-                start_r      = start_r,
-                end_r        = end_r,
-                bits         = bits,
-                target_h160  = target_h160,
-                pubkey_xy    = pubkey_xy,
-                pubkey_hex   = pubkey_hex,
-                shots        = _qsss_shots,
-                opt_level    = opt_level,
-                backend_mode = backend_mode,
-                iqm_device   = iqm_device,
-                iqm_token    = iqm_token,
-                ibm_token    = ibm_token,
-                ibm_crn      = ibm_crn,
-                ibm_backend_name = ibm_backend_name,
-                n_probes_f1  = qsss_n_probes_f1,
-                n_sweeps_f2  = qsss_n_sweeps_f2,
-                top_t_f3     = qsss_top_t_f3,
-                n_grover_reps_f3 = qsss_n_grover_reps,
-                max_rounds_f4 = qsss_max_rounds_f4,
-                zeno_target_bits = qsss_zeno_bits,
-                top_n_f5     = qsss_top_n_f5,
-                max_verify_f6 = qsss_max_verify,
-                address      = address,
-                iqm_device_label = iqm_device,
-                save_qsss_report = True,
-            )
-
-            if _found_key is not None:
-                # Exact key confirmed — return a 1-wide bracket
-                _pinned_ex = ["1" if (_found_key >> (bits-1-b)) & 1
-                              else "0" for b in range(bits)]
-                _bp_ex = np.array(
-                    [(_found_key >> (bits-1-b)) & 1 for b in range(bits)],
-                    dtype=float)
-                return _found_key, _found_key + 1, _pinned_ex, _bp_ex
-
-            # Update start_r/end_r to the Zeno-squeezed bracket
-            if _zeno_s < _zeno_e:
-                log.info(f"  [PHASE F] Zeno bracket replaces reducer bracket: "
-                         f"[{hex(_zeno_s)}, {hex(_zeno_e)}]  "
-                         f"size={_zeno_e-_zeno_s:,}")
-                start_r, end_r = _zeno_s, _zeno_e
-                # Re-compute bit_probs from top10
-                if _top10:
-                    _bp_new = np.zeros(bits)
-                    for k in _top10:
-                        for b in range(bits):
-                            _bp_new[bits-1-b] += (k >> b) & 1
-                    bit_probs = _bp_new / max(len(_top10), 1)
-                    pinned = ["1" if p > 0.80 else "0" if p < 0.20 else "?"
-                              for p in bit_probs]
-                # Save updated result file
-                save_result(start_r, end_r, bits, pinned, bit_probs,
-                            mode_label + " [QSSS-Zeno]", address, iqm_device)
-                if use_kangaroo_export:
-                    export_kangaroo(start_r, end_r, bits, pubkey_xy, shift,
-                                    address, iqm_device=iqm_device)
-
-        except Exception as _qsss_ex:
-            log.warning(f"  [PHASE F] QSSS failed: {_qsss_ex}")
-            import traceback as _tb
-            log.debug(_tb.format_exc())
-    else:
-        if not run_qsss:
-            log.info("  [PHASE F] QSSS disabled (run_qsss=False)")
-        elif mode1_found_offset is not None:
-            log.info("  [PHASE F] QSSS skipped (key already found in Phase C)")
-        else:
-            log.info("  [PHASE F] QSSS skipped (no pubkey or hash160 target)")
-
     return start_r, end_r, pinned, bit_probs
 
 
@@ -5785,10 +4639,9 @@ def interactive_main() -> None:
     # ── Input mode ─────────────────────────────────────────────────────────────
     print("  ┌─ INPUT MODE ─────────────────────────────────────────────────────┐")
     print("  │  [1]  Bitcoin P2PKH address only        (Hash160 — Mode1 Grover) │")
-    print("  │  [2]  Address  +  compressed public key    (hybrid — strong)     │")
-    print("  │  [3]  Compressed public key only           (strongest signal)    │")
-    print("  └───────────────────────────────────────────────────────────────────┘")
-    choice = _ask("Select input mode [1/2/3]", "1")
+    print("  │  [2]  Address + Compressed public key   (hybrid — strong signal) │")
+    print("  └──────────────────────────────────────────────────────────────────┘")
+    choice = _ask("Select input mode [1/2]", "1")
 
     if choice == "1":
         print("\n  ┌─ MODE [1] — ADDRESS ONLY ─────────────────────────────────────────┐")
@@ -5841,7 +4694,7 @@ def interactive_main() -> None:
     print("  │  (shots / layers / iters auto-filled when a preset is selected)  │")
     print("  │    5 · 8 · 14 · 16 · 20 · 21 · 24 · 25 · 32 · 40 · 64 · 71 · 135│")
     print("  └───────────────────────────────────────────────────────────────────┘")
-    bits_s = _ask("Bit length", "16")
+    bits_s = _ask("Bit length", "20")
     bits   = int(bits_s)
     full_start, full_end = auto_range(bits)
     print(f"  Full key range: [{hex(full_start)}, {hex(full_end)}]")
@@ -5922,7 +4775,7 @@ def interactive_main() -> None:
     print("  │  ── IBM QUANTUM HARDWARE (qiskit-ibm-runtime) ──────────────────  │")
     print("  │  [8]  IBM Hardware  (ibm_fez 156q · ibm_kingston 156q · etc.)    │")
     print("  └────────────────────────────────────────────────────────────────────┘")
-    bk_in = _ask("Backend [1..8]", "8")
+    bk_in = _ask("Backend [1..8]", "1")
 
     iqm_device = "garnet"; iqm_token = ""
     ibm_token  = ""; ibm_crn = ""; ibm_backend_name = _IBM_DEFAULT_BACKEND
@@ -5964,9 +4817,13 @@ def interactive_main() -> None:
         print("  ✅ Aer Simulator selected (local, no token needed)")
 
 
-    # ── Sampler parameters — fixed defaults regardless of bit length ────────────
-    # NOTE: _preset_* values are intentionally NOT used as _ask() defaults.
-    # The same recommended config applies for every bit length / range target.
+    # ── Sampler parameters — pre-filled from preset ────────────────────────────
+    _def_shots  = 4096
+    _def_layers = 5
+    _def_iters  = 4
+    _def_probes = 512
+    _has_preset = bits in PUZZLE_PRESETS
+    _pfx        = "preset" if _has_preset else "default"
 
     if backend_mode in ("iqm_hardware", "qrisp_iqm"):
         dev_q = IQM_DEVICE_QUBITS.get(iqm_device, 18)
@@ -5979,19 +4836,17 @@ def interactive_main() -> None:
     print(f"\n  ┌─ SAMPLER PARAMETERS ─────────────────────────────────────────────┐")
     print(f"  │  TwoLocal layers     3=fast · 4=balanced · 5=deeper             │")
     print(f"  │  Iterations          4=quick · 8=good · 12=thorough             │")
-    print(f"  │  Shots (default)     4096   (2048=fast · 65536=best)            │")
-    print(f"  │  Layers (default)    5 (3=fast · 5=deep)                        │")
-    print(f"  │  Iters (default)     4  (4=quick · 20=thorough)                 │")
-    print(f"  │  Ising probes        512 opt=2 · 1024 opt=3  (256=fast)         │")
-    print( "  │  SPSA iterations     0=disabled (always off by default)          │")
+    print(f"  │  Shots ({_pfx:<7})   {_def_shots:<6} (2048=fast · 65536=best)       │")
+    print(f"  │  Layers ({_pfx:<7})  {_def_layers} (3=fast · 5=deep)                 │")
+    print(f"  │  Iters ({_pfx:<7})   {_def_iters:<2} (4=quick · 20=thorough)           │")
+    print(f"  │  Ising probes ({_pfx:<7}) {_def_probes:<4} (256=fast · 1024=best)   │")
+    print( "  │  SPSA iterations     0=disabled · 40=fast · 0=default · 100=best│")
     print( "  └───────────────────────────────────────────────────────────────────┘")
-    layers     = int(_ask("TwoLocal layers",         "5"))
-    iters      = int(_ask("Iterations",              "4"))
-    shots      = int(_ask("Shots per iter",          "4096"))
+    layers     = int(_ask("TwoLocal layers",         str(_def_layers)))
+    iters      = int(_ask("Iterations",              str(_def_iters)))
+    shots      = int(_ask("Shots per iter",          str(_def_shots)))
     opt_level  = int(_ask("Transpile opt level",     "2"))
-    # Auto-link probes to opt_level: 2→512, 3→1024 (user can still override)
-    _default_probes = "1024" if opt_level >= 3 else "512"
-    n_probes   = int(_ask("Ising probes",            _default_probes))
+    n_probes   = int(_ask("Ising probes",            str(_def_probes)))
     spsa_iters = int(_ask("SPSA iterations (0=off)", "0"))
     use_spsa   = spsa_iters > 0 and SPSA_OK
 
@@ -6002,40 +4857,23 @@ def interactive_main() -> None:
         else f"Phase-kickback (crash-free, {bits}q > {_DIAG_MAX_BITS}q)"
     )
     print("\n  ┌─ GROVER-IPE PARAMETERS ───────────────────────────────────────────┐")
-    print("  │  IPE rounds       3=fast(min) · 4=default · 6=thorough           │")
+    print("  │  IPE rounds       3=fast(min) · 3=default · 6=thorough           │")
     print("  │  Grover shots     2048=fast · 4096=default · 8192=thorough        │")
-    print("  │  Top-K candidates 128=light · 4096=default · 256=thorough        │")
+    print("  │  Top-K candidates 32=fast · 4096=default(G-8) · 256=thorough      │")
     print(f"  │  Oracle (auto)    {oracle_info:<52} │")
     print("  └───────────────────────────────────────────────────────────────────┘")
     n_ipe   = int(_ask("IPE rounds (≥3)",      "3"))
-    g_shots = int(_ask("Grover shots",         "4096"))
+    g_shots = int(_ask("Grover shots",         str(_def_shots)))
     g_topk  = int(_ask("Top-K candidates",    "4096"))
 
     # ── Multi-run ─────────────────────────────────────────────────────────────
     print("\n  ┌─ MULTI-RUN VOTING [G-6] ─────────────────────────────────────────┐")
-    print("  │  1=single run(default) · 3=good · 5=tighter · 10=tight+slow      │")
+    print("  │  1=single run(default)                                           │")
     print("  └───────────────────────────────────────────────────────────────────┘")
     n_runs   = int(_ask("Number of runs", "1"))
     shor_s1  = _ask("Enable S1 QFT Period Finding [Y/n]", "Y").upper().startswith("Y")
     shor_s2  = _ask("Enable S2 Full QPE [Y/n]", "Y").upper().startswith("Y")
     shor_s3  = _ask("Enable S3 Amplitude Estimation [Y/n]", "Y").upper().startswith("Y")
-
-    # ── [PHASE F] QSSS controls ────────────────────────────────────────────────
-    print("\n  ┌─ [PHASE F] QUANTUM SUPREMACY SMART SEARCH (QSSS) ────────────────┐")
-    print("  │  Fires INSIDE the reduced bracket to pinpoint the hidden key.    │")
-    print("  │  F1 Re-Ising · F2 Dense QPB · F3 Grover · F4 Zeno · F5 Resonate│")
-    print("  │  F6 Classical Verify — confirms the key if found.                │")
-    print("  └───────────────────────────────────────────────────────────────────┘")
-    run_qsss = _ask("Enable QSSS Phase F? [Y/n]", "Y").upper().startswith("Y")
-    if run_qsss:
-        qsss_n_sweeps = int(_ask("F2 Dense QPB sweeps  (4=default · 6=thorough)", "4"))
-        qsss_top_t    = int(_ask("F3 Grover shortlist  (32=default · 64=thorough)", "32"))
-        qsss_zeno_b   = int(_ask("F4 Zeno target width (2^N keys, 6=64 keys, 8=256)", "6"))
-        qsss_n_f5     = int(_ask("F5 Resonance scan top-N  (64=default · 128=deep)", "64"))
-        qsss_verify   = int(_ask("F6 Classical verify limit  (2048=default)", "2048"))
-    else:
-        qsss_n_sweeps = 4; qsss_top_t = 32; qsss_zeno_b = 6
-        qsss_n_f5 = 64; qsss_verify = 2048
     use_kexp = _ask("Export kangaroo JSON? [Y/n]", "Y").lower() not in ("n","no")
     save_plt = _ask("Save bit-probability plot? [Y/n]", "Y").lower() not in ("n","no")
 
@@ -6100,16 +4938,6 @@ def interactive_main() -> None:
         use_range_shift=(pubkey_xy is not None),
         use_spsa=use_spsa, spsa_max_iter=spsa_iters,
         use_kangaroo_export=use_kexp,
-        # QSSS
-        run_qsss=run_qsss,
-        qsss_n_sweeps_f2=qsss_n_sweeps,
-        qsss_top_t_f3=qsss_top_t,
-        qsss_zeno_bits=qsss_zeno_b,
-        qsss_top_n_f5=qsss_n_f5,
-        qsss_max_verify=qsss_verify,
-        qsss_n_probes_f1=1024,
-        qsss_n_grover_reps=2,
-        qsss_max_rounds_f4=12,
     )
 
     if n_runs > 1:
@@ -6137,7 +4965,7 @@ def interactive_main() -> None:
     print(f"  │  Range size  : {new_size:<,} keys")
     print(f"  │  Reduction   : {reduction:.1f}× smaller than full {bits}-bit range")
     print(f"  │  Method      : Quantum walk interference density — measured values only")
-    print(f"  │  Please a Donation: 1Bu4CR8Bi5AXQG8pnu1avny88C5CCgWKfb")
+    print(f"  │  Please Any Donation: 1Bu4CR8Bi5AXQG8pnu1avny88C5CCgWKfb")
     print(f"  └────────────────────────────────────────────────────────────────────┘")
     print(f"")
     print(f"  BitCrack GPU command:")
@@ -6219,27 +5047,6 @@ Tokens:  export IQM_TOKEN=...   export IBM_QUANTUM_TOKEN=...
                    help="Disable S2 full QPE phase")
     p.add_argument("--no-shor-s3",    action="store_true",
                    help="Disable S3 amplitude-estimation phase")
-    # ── [PHASE F] QSSS ────────────────────────────────────────────────────────
-    p.add_argument("--no-qsss",        action="store_true",
-                   help="Disable Phase F Quantum Supremacy Smart Search")
-    p.add_argument("--qsss-sweeps",    type=int, default=4,
-                   help="F2 dense QPB sweep count (default 4)")
-    p.add_argument("--qsss-top-t",     type=int, default=32,
-                   help="F3 Grover shortlist size (default 32)")
-    p.add_argument("--qsss-grover-reps", type=int, default=2,
-                   help="F3 Grover circuit repetitions (default 2)")
-    p.add_argument("--qsss-zeno-rounds", type=int, default=12,
-                   help="F4 max Zeno halving rounds (default 12)")
-    p.add_argument("--qsss-zeno-bits",  type=int, default=6,
-                   help="F4 Zeno target bracket width 2^N (default 6 = 64 keys)")
-    p.add_argument("--qsss-top-n-f5",  type=int, default=64,
-                   help="F5 resonance scan top-N (default 64)")
-    p.add_argument("--qsss-verify",    type=int, default=2048,
-                   help="F6 classical verification limit (default 2048)")
-    p.add_argument("--qsss-probes",    type=int, default=1024,
-                   help="F1 re-Ising probe count (default 1024)")
-    p.add_argument("--qsss-shots",     type=int, default=0,
-                   help="Shots for QSSS phases (0 = same as --shots)")
     args = p.parse_args()
 
     if args.interactive or len(sys.argv) == 1:
@@ -6345,17 +5152,6 @@ Tokens:  export IQM_TOKEN=...   export IBM_QUANTUM_TOKEN=...
         use_spsa=use_spsa, spsa_max_iter=args.spsa_iters,
         use_kangaroo_export=not args.no_kangaroo,
         use_shor_s1=shor_s1, use_shor_s2=shor_s2, use_shor_s3=shor_s3,
-        # ── [PHASE F] QSSS ──────────────────────────────────────────────────
-        run_qsss           = not args.no_qsss,
-        qsss_shots         = args.qsss_shots,
-        qsss_n_sweeps_f2   = args.qsss_sweeps,
-        qsss_top_t_f3      = args.qsss_top_t,
-        qsss_n_grover_reps = args.qsss_grover_reps,
-        qsss_max_rounds_f4 = args.qsss_zeno_rounds,
-        qsss_zeno_bits     = args.qsss_zeno_bits,
-        qsss_top_n_f5      = args.qsss_top_n_f5,
-        qsss_max_verify    = args.qsss_verify,
-        qsss_n_probes_f1   = args.qsss_probes,
     )
 
     t0 = time.perf_counter()
@@ -6383,6 +5179,7 @@ Tokens:  export IQM_TOKEN=...   export IBM_QUANTUM_TOKEN=...
     print(f"  │  Bits pinned : {pc}/{bits}")
     print(f"  │  Reduction   : {reduction:.1f}×")
     print(f"  │  Method      : Quantum walk interference density — measured values only")
+    print(f"  │  Please Any Donation: 1Bu4CR8Bi5AXQG8pnu1avny88C5CCgWKfb")
     print(f"  └────────────────────────────────────────────────────────────────────┘")
     print(f"")
     print(f"  BitCrack:")
